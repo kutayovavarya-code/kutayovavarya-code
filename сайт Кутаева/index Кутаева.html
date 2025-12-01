@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная веб-страница Варюшки Кутаевой</title>
+    <link rel="stylesheet" href="styles Кутаева.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🎶 Наследие русских композиторов</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#gallery">О композиторах</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2 id="heroTitle">Добро пожаловать!</h2>
+                <p>Творцы, чьи имена стали брендом русской культуры</p>
+                <div class="button-group">
+                    <button id="changeThemeBtn" class="btn btn-primary">🎨 Сменить тему</button>
+                    <button id="showModalBtn" class="btn btn-secondary">ℹ️ Информация</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="content">
+            <h2>🆎 Фамилии творцов</h2>
+            <div class="gallery-controls">
+                <input type="text" id="searchInput" placeholder="🔍 Поиск по названию..." class="search-input">
+                <button id="shuffleBtn" class="btn btn-small">🔀 Перемешать</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-name="Природа">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+                    <p>Чайковский</p>
+                </div>
+                <div class="gallery-item" data-name="Город">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
+                    <p>Глинка</p>
+                </div>
+                <div class="gallery-item" data-name="Технологии">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
+                    <p>Мусоргский</p>
+                </div>
+                <div class="gallery-item" data-name="Искусство">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #43e97b, #38f9d7);"></div>
+                    <p>Рахманинов</p>
+                </div>
+                <div class="gallery-item" data-name="Спорт">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #fa709a, #fee140);"></div>
+                    <p>Шостакович</p>
+                </div>
+                <div class="gallery-item" data-name="Римский-Корсаков">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a8edea, #fed6e3);"></div>
+                    <p>Римский-Корсаков</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="faq" class="content">
+            <h2>❓ Часто задаваемые вопросы</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Кого считают «отцом русской классической музыки»?</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Михаила Ивановича Глинку, его оперы заложили основы русской музыкальной школы.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Что такое «Могучая кучка»?</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Творческое объединение пяти русских композиторов: Балакирев, Мусоргский, Бородин, Кюи, Римский-Корсаков.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3> Чем уникален стиль русских композиторов?</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Использование народных мелодий, эпический размах, глубокая эмоциональность.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="content">
+            <h2>📧 Мой музыкальный опыт</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Уровень музыкальной подготовки</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Идельный плейлист из русской классики</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>ℹ️ Информация о проекте</h2>
+            <p>Это интерактивная веб-страница, созданная для изучения русского музыкального наследия.</p>
+            <p>На странице представлены различные интерактивные элементы:</p>
+            <ul>
+                <li>Известные композиторы</li>
+                <li>Часто задаваемые вопрсы</li>
+                <li>Форма обратной связи</li>
+                <li>Смена темы оформления</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Наследие русских композиторов. Вдохновлено великими мелодиями</p>
+    </footer>
+
+    <script src="script Кутаева.js"></script>
+</body>
+</html>
